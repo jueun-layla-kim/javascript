@@ -90,38 +90,66 @@
 // 6. 논리 연산자
 // ||(or), &&(and), !(not)
 {
-    let a = 100 > 50 // true
-    let b = 10 < 5 // false
-    let c = true
+    // let a = 100 > 50 // true
+    // let b = 10 < 5 // false
+    // let c = true
 
-    // || -> 하나라도 true 이면 -> true
-    console.log(a || b || c)
+    // // || -> 하나라도 true 이면 -> true
+    // console.log(a || b || c)
 
-    // && -> 전부 true일때만 -> true
-    console.log(a && b && c)
+    // // && -> 전부 true일때만 -> true
+    // console.log(a && b && c)
 
-    // ! -> 값을 반대로 바꾼다
-    b = !b
-    console.log(b);
+    // // ! -> 값을 반대로 바꾼다
+    // b = !b
+    // console.log(b);
 }
 
 // 7. 동등 위치 연산자
 // ==, ===, !=. !==
 {
-    const value1 = '100'
-    const value2 = 100
+    // const value1 = '100'
+    // const value2 = 100
 
-    console.log(value1 == value2);
-    console.log(value1 != value2);
-    console.log(value1 === value2);
-    console.log(value1 !== value2);
+    // console.log(value1 == value2);
+    // console.log(value1 != value2);
+    // console.log(value1 === value2);
+    // console.log(value1 !== value2);
 
-    console.log('--------------------');
-    console.log(0 === false);
-    console.log(0 == false);
-    console.log('' == false);
-    console.log('' === false);
-    console.log(null == undefined);
-    console.log(null === undefined);
-    console.log('--------------------');
+    // console.log('--------------------');
+    // console.log(0 === false);
+    // console.log(0 == false);
+    // console.log('' == false);
+    // console.log('' === false);
+    // console.log(null == undefined);
+    // console.log(null === undefined);
+    // console.log('--------------------');
+}
+
+// 8. 상황 조건 연산자 - ? :
+{
+    // const a = 20
+    // const b = 15
+
+    // const result = a > b ? '감사합니다.' : '안녕하세요'
+    // console.log(result);
+}
+
+// 실습 : 표준 체중 테스트 프로그램
+// 홍길동 : 키 180cm, 체중 80kg
+// 표준 체중 : (키 - 100) * 0.9
+
+{
+    // const userHeight = 180
+    // const userWeight = 80
+    // const normalWeight = (userHeight - 100) * 0.9
+    // console.log(normalWeight)
+
+    const name = prompt('당신의 이름은?')
+    const height = prompt('당신의 키는?')
+    const weight = prompt('당신의 체중은?')
+    const normalWeight = (height - 100) * 0.9
+    const result = weight >= normalWeight -5 && weight <= normalWeight +5
+    const message = result ? '적정체중입니다.' : '적정체중이 아닙니다.'
+    document.querySelector('.text').innerHTML = `${name}님은 ${message}`
 }
