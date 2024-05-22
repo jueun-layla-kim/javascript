@@ -72,10 +72,29 @@
 
 // for문으로 구구단 출력
 {
-    for(let i = 1; i <= 9; i++) {
-        console.log(`${i}단 시작`);
-        for(let j = 1; j <= 9; j++) {
-            console.log(`${i} X ${j} = ${i*j}`);
+    // for(let i = 1; i <= 9; i++) {
+    //     console.log(`${i}단 시작`);
+    //     for(let j = 1; j <= 9; j++) {
+    //         console.log(`${i} X ${j} = ${i*j}`);
+    //     }
+    // }
+}
+
+// 1 ~ 25 입력된 5행 5열의 테이블 출력
+{
+    let num = 1
+    let tbl = '<table>'
+
+    for(let i = 1; i <= 10; i++){
+        tbl += '<tr>'
+        for(let j = 1; j <= 10; j++) {
+            tbl +=`<td>${num}</td>`
+            num++
         }
+        tbl += '</tr>'
     }
+    tbl += '</table>'
+
+    console.log(tbl);
+    document.querySelector('.box').innerHTML = tbl
 }
