@@ -1,2 +1,1 @@
-# JavaScript 정리
-
+# javascript 정리
