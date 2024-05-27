@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.contents {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.contents .item {}
+
+.contents .item h2 {
+    background-color: #fff;
+    border-bottom: 1px solid #999;
+    position: relative;
+    padding: 16px 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.contents .item h2::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-family : xeicon;
+    content: "\e913";
+}
+
+.contents .item p {
+    line-height: 1.6;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+.contents .item.active p {
+    height: auto;
+    padding: 20px 0;
+}
+
+.contents .item.active h2::after {
+    content: "\e91a";
+}
