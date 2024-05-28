@@ -2,14 +2,20 @@ const form = document.querySelector('.todo_form')
 const input = form.querySelector('input')
 const ul = document.querySelector('.todo_list')
 
-const todos = []
+let todos = []
 
 function saveTodo() {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
 
-function removeTodo() {
-    console.log('삭제');
+function removeTodo(e) {
+    const li = e.target.parentNode
+    li.remove()
+    const newTodos = todos.filter(todo => todo.id !== parseInt(li.id))
+    todos = newTodos
+    console.log(todos);
+
+    saveTodo()
 }
 
 function paintTodo(text) {
