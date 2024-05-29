@@ -25,7 +25,7 @@ function getSearchImg(query) {
 }
 
 function paintImg(photos) {
-    console.log(photos);
+    // console.log(photos);
     photos.forEach(photo => {
         const item = document.createElement('div')
         item.classList.add('item')
