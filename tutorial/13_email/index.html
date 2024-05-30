@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="mail_container">
+            <h2>메일 보내기</h2>
+            <form id="contact-form">
+                <label>이름</label>
+                <input type="text" placeholder="이름" name="name">
+                <label>이메일</label>
+                <input type="email" placeholder="이메일" name="email">
+                <label for="내용"></label>
+                <textarea 
+                    name="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="내용">
+                </textarea>
+                <button type="submit">보내기</button>
+            </form>
+        </div>
+    </div>    
 
     <script src="./app.js"></script>
 </body>
